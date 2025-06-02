@@ -1,31 +1,28 @@
+# CODEOWNERS for Qiskit
+
 # This file defines the set of people responsible for different sections of the
-# Qiskit code.
+# Qiskit codebase.
 #
-# Being listed as a code owner on a section here means that user is empowered
-# to approve and merge pull requests for that section of code. It also comes
-# with an expected responsibility to review and maintain those subsections of
-# the repository.
+# Code owners are empowered to approve and merge pull requests for their sections,
+# and are expected to review and maintain those parts of the repository.
 #
-# The @Qiskit/terra-core team is the group who're responsible for the
-# entire qiskit-terra project and are empowered to approve merge code in any
-# part of the repository. Any member of the terra-core group should not be
-# listed in this file as it's redundant.
+# The @Qiskit/terra-core team has global authority over qiskit-terra and can approve
+# and merge code anywhere in the repo. Individual code owners are listed for
+# specialized areas to ensure expertise and prompt reviews.
 #
-# A PR can be merged when approved by at least one codeowner. For PRs that touch
-# more than one section with non-overlapping codeowners more than one codeowner
-# may be required to approve a PR.
-#
-# However, every contributor to Qiskit can (and should!) review open PRs. This
-# file is just about outlining responsibility for maintainership and final
-# review/merging of PRs in different subsections of the repository.
+# Any contributor is welcome (and encouraged!) to review open PRs. Code ownership
+# is about final approval and maintainership, not gatekeeping community input.
 
-# Global rule, unless specialized by a later one
-* @Qiskit/terra-core
+# Global rule: unless overridden below, @Qiskit/terra-core are the code owners.
+*                       @Qiskit/terra-core
 
-# Qiskit folders (also their corresponding tests)
-providers/            @Qiskit/terra-core @jyu00
-visualization/        @Qiskit/terra-core @nonhermitian
-primitives/           @Qiskit/terra-core @Qiskit/qiskit-primitives
-# Override the release notes directories to have _no_ code owners, so any review
-# from somebody with write access is acceptable.
+# Specialized ownership for key submodules:
+providers/              @Qiskit/terra-core @jyu00
+visualization/          @Qiskit/terra-core @nonhermitian
+primitives/             @Qiskit/terra-core @Qiskit/qiskit-primitives
+
+# Release notes can be reviewed by anyone with write access; no code owners required.
 /releasenotes/notes
+
+# Want to be a code owner? Show your expertise and commitment through reviews and
+# contributions—maintainers are always looking for new collaborators!
